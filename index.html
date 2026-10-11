@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Galaxy · One UI</title>
+  <link rel="stylesheet" href="css/oneui.css" />
+  <link rel="stylesheet" href="css/apps.css" />
+</head>
+<body>
+  <div class="stage">
+    <div class="phone" id="phone">
+      <div class="side-btn vol-up"></div>
+      <div class="side-btn vol-down"></div>
+      <div class="side-btn power"></div>
+      <div class="side-btn bixby"></div>
+
+      <div class="screen" id="screen">
+        <div class="punch-hole" id="punchHole"></div>
+
+        <div class="status-bar" id="statusBar">
+          <div class="sb-left">
+            <span id="sbTime">9:41</span>
+          </div>
+          <div class="sb-right">
+            <span class="sb-icon" title="signal">
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor"><rect x="0" y="9" width="3" height="3" rx="0.5"/><rect x="4" y="6" width="3" height="6" rx="0.5"/><rect x="8" y="3" width="3" height="9" rx="0.5"/><rect x="12" y="0" width="3" height="12" rx="0.5" opacity="0.35"/></svg>
+            </span>
+            <span class="sb-5g">5G</span>
+            <span class="sb-bat">
+              <span class="sb-bat-fill" id="batFill"></span>
+            </span>
+            <span class="sb-bat-pct" id="batPct">100</span>
+          </div>
+        </div>
+
+        <!-- Boot -->
+        <div class="boot" id="boot">
+          <div class="boot-logo">SAMSUNG</div>
+        </div>
+
+        <!-- Lock -->
+        <div class="lock" id="lock">
+          <div class="lock-bg"></div>
+          <div class="lock-content">
+            <div class="lock-date" id="lockDate">Sunday, 11 October</div>
+            <div class="lock-time" id="lockTime">09:41</div>
+            <div class="lock-hint">Swipe up to unlock</div>
+          </div>
+          <div class="lock-shortcuts">
+            <button type="button" class="lock-fab" id="lockPhone" aria-label="Phone">📞</button>
+            <button type="button" class="lock-fab" id="lockCam" aria-label="Camera">📷</button>
+          </div>
+        </div>
+
+        <!-- Home -->
+        <div class="home" id="home">
+          <div class="home-bg"></div>
+          <div class="home-pages" id="homePages">
+            <div class="home-page active" data-page="0">
+              <div class="widget-clock">
+                <div class="wc-time" id="homeClock">09:41</div>
+                <div class="wc-date" id="homeDate">Sun, 11 Oct</div>
+              </div>
+              <div class="app-grid" id="gridHome"></div>
+            </div>
+            <div class="home-page" data-page="1">
+              <div class="app-grid" id="gridHome2"></div>
+            </div>
+          </div>
+          <div class="page-dots" id="pageDots"><span class="on"></span><span></span></div>
+          <div class="dock" id="dock"></div>
+        </div>
+
+        <!-- App drawer -->
+        <div class="drawer" id="drawer">
+          <div class="drawer-search">
+            <input type="search" id="drawerSearch" placeholder="Search apps" autocomplete="off" />
+          </div>
+          <div class="drawer-grid" id="drawerGrid"></div>
+        </div>
+
+        <!-- Quick settings -->
+        <div class="qs" id="qs">
+          <div class="qs-handle"></div>
+          <div class="qs-time" id="qsTime">09:41</div>
+          <div class="qs-tiles" id="qsTiles"></div>
+          <div class="qs-sliders">
+            <div class="qs-slider">
+              <span>☀</span>
+              <input type="range" min="10" max="100" value="80" id="brightSlider" />
+            </div>
+            <div class="qs-slider">
+              <span>🔊</span>
+              <input type="range" min="0" max="100" value="60" id="volSlider" />
+            </div>
+          </div>
+        </div>
+
+        <!-- App host -->
+        <div class="app-host" id="appHost"></div>
+
+        <!-- Nav bar (gesture) -->
+        <div class="nav-bar" id="navBar">
+          <button type="button" class="nav-btn" id="navRecent" aria-label="Recent">▢</button>
+          <button type="button" class="nav-btn home-btn" id="navHome" aria-label="Home">○</button>
+          <button type="button" class="nav-btn" id="navBack" aria-label="Back">◁</button>
+        </div>
+      </div>
+    </div>
+    <p class="hint">Galaxy · One UI · Swipe up on lock · Pull status bar for Quick Settings</p>
+  </div>
+
+  <script src="js/apps.js"></script>
+  <script src="js/oneui.js"></script>
+</body>
+</html>
